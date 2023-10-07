@@ -16,7 +16,7 @@ class API(Session):
         # Handle SSL verification disabling
         try:
             # Get an ssl_verify config. Default to True if it doesn't exist
-            ssl_verify = config["config"].getboolean("ssl_verify", True)
+            ssl_verify = config["config"].getboolean("ssl_verify", False)
         except ValueError:
             # If we didn't a proper boolean value we should load it as a string
             # https://requests.kennethreitz.org/en/master/user/advanced/#ssl-cert-verification

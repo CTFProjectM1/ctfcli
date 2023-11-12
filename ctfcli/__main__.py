@@ -9,6 +9,10 @@ from typing import Optional, Union
 import click
 import fire
 
+import requests 
+from urllib3. exceptions import InsecureRequestWarning 
+requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning) 
+
 from ctfcli.cli.challenges import ChallengeCommand
 from ctfcli.cli.config import ConfigCommand
 from ctfcli.cli.pages import PagesCommand
